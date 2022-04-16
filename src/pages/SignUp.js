@@ -6,6 +6,7 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore/lite';
 import { toast } from 'react-toastify';
+import OAuth from '../components/OAuth';
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,7 +30,6 @@ function SignUp() {
     event.preventDefault();
     if (email.trim().length !== 0 && password.trim().length !== 0) {
       try {
-        // eslint-disable-next-line prettier/prettier
         const userCredential = await createUserWithEmailAndPassword(
           auth,
           email,
@@ -104,7 +104,7 @@ function SignUp() {
             </button>
           </div>
         </form>
-        {/* Google oAuth */}
+        <OAuth />
       </div>
     </>
   );

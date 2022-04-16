@@ -8,11 +8,14 @@
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^9.6.10",
     "fireplace": "^0.4.0",
+    "leaflet": "^1.7.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-leaflet": "^3.2.5",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
     "react-toastify": "^8.2.0",
+    "swiper": "^6.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -20,12 +23,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -38,15 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint": "^8.13.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.4",
-    "prettier": "^2.6.2"
-  },
-  "lint": "eslint .",
-  "lint:fix": "eslint --fix",
-  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+  }
 }

@@ -24,7 +24,6 @@ function Navbar() {
             />
             <p
               className={
-                // eslint-disable-next-line prettier/prettier
                 pathMatchRoute('/')
                   ? 'navbarListItemNameActive'
                   : 'navbarListItemName'
@@ -40,12 +39,11 @@ function Navbar() {
             />
             <p
               className={
-                // eslint-disable-next-line prettier/prettier
                 pathMatchRoute('/offers')
                   ? 'navbarListItemNameActive'
                   : 'navbarListItemName'
               }>
-              Offer
+              Offers
             </p>
           </li>
           <li className="navbarListItem" onClick={() => navigate('/profile')}>
@@ -56,7 +54,6 @@ function Navbar() {
             />
             <p
               className={
-                // eslint-disable-next-line prettier/prettier
                 pathMatchRoute('/profile')
                   ? 'navbarListItemNameActive'
                   : 'navbarListItemName'

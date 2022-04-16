@@ -5,6 +5,7 @@ import VisibilityIcon from '../assets/svg/visibilityIcon.svg';
 import { auth } from '../firebase.config';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { toast } from 'react-toastify';
+import OAuth from '../components/OAuth';
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
@@ -27,7 +28,6 @@ function SignIn() {
     event.preventDefault();
     if (email.trim().length !== 0 && password.trim().length !== 0) {
       try {
-        // eslint-disable-next-line prettier/prettier
         const userCredential = await signInWithEmailAndPassword(
           auth,
           email,
@@ -89,10 +89,10 @@ function SignIn() {
             </button>
           </div>
         </form>
-        {/* Google oAuth */}
         <Link to={'/sign-up'} className="registerLink">
           Sign Up Instead
         </Link>
+        <OAuth />
       </div>
     </>
   );
